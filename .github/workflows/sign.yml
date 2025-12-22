@@ -10,15 +10,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sign IPA
-        uses: yoeight/sign-ipa-action@v1
+        uses: apple-actions/import-codesign-certs@v3
         with:
-          ipa_path: "ESign.ipa"
-          p12_base64: ${{ secrets.P12_BASE64 }}
-          p12_password: ${{ secrets.P12_PASSWORD }}
-          mobileprovision_base64: ${{ secrets.PROVISION_BASE64 }}
+          p12-file-base64: ${{ secrets.P12_BASE64 }}
+          p12-password: ${{ secrets.P12_PASSWORD }}
 
-      - name: Upload Signed IPA
+      - name: Install Provisioning Profile
+        uses: apple-actions/download-provisioning-profile@v3
+        with:
+          bundle-id: '*'
+          profile-base64: ${{ secrets.PROVISION_BASE64 }}
+
+      - name: Execute Signing
+        run: |
+          # أمر بسيط لتوقيع ملفك الموجود مسبقاً ESign.ipa
+          xcrun codesign -f -s "iPhone Distribution" --provisioning-profile *.mobileprovision ESign.ipa
+          mv ESign.ipa ESign_Signed.ipa
+
+      - name: Upload Result
         uses: actions/upload-artifact@v4
         with:
-          name: ESign-Signed
-          path: "ESign-signed.ipa"
+          name: Final-Signed-App
+          path: ESign_Signed.ipa
