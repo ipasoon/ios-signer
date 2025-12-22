@@ -9,12 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download IPA from Release
+      - name: Download IPA
         run: |
-          # سحب رابط التحميل لملف الـ IPA من آخر Release تم نشره
-          DOWNLOAD_URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | grep "browser_download_url.*ipa" | cut -d : -f 2,3 | tr -d \" | xargs)
-          echo "Downloading from: $DOWNLOAD_URL"
-          wget -q "$DOWNLOAD_URL" -O app.ipa
+          # سحب رابط أحدث ملف IPA من الـ Releases وتحميله باسم app.ipa
+          URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | grep "browser_download_url" | grep ".ipa" | cut -d '"' -f 4 | head -n 1)
+          echo "Downloading from: $URL"
+          curl -L "$URL" -o app.ipa
 
       - name: Setup ZSign
         run: |
@@ -27,12 +27,11 @@ jobs:
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
 
-      - name: Sign IPA
+      - name: Sign Application
         run: |
-          # عملية التوقيع باستخدام الشهادة وكلمة السر والبروفايل
           zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
 
-      - name: Upload Signed IPA
+      - name: Upload Result
         uses: actions/upload-artifact@v3
         with:
           name: Signed-IPA
