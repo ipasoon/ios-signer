@@ -9,26 +9,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Sign IPA
-        uses: apple-actions/import-codesign-certs@v3
-        with:
-          p12-file-base64: ${{ secrets.P12_BASE64 }}
-          p12-password: ${{ secrets.P12_PASSWORD }}
-
-      - name: Install Provisioning Profile
-        uses: apple-actions/download-provisioning-profile@v3
-        with:
-          bundle-id: '*'
-          profile-base64: ${{ secrets.PROVISION_BASE64 }}
-
-      - name: Execute Signing
+      - name: Prepare Secrets
         run: |
-          # أمر بسيط لتوقيع ملفك الموجود مسبقاً ESign.ipa
-          xcrun codesign -f -s "iPhone Distribution" --provisioning-profile *.mobileprovision ESign.ipa
-          mv ESign.ipa ESign_Signed.ipa
+          echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
+          echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
 
+      - name: Sign with Security Tool
+        run: |
+          # فك الملف الأصلي (IPA هو مجرد Zip)
+          unzip -q ESign.ipa
+          
+          # توقيع المجلد الداخلي باستخدام أداة أبل الرسمية
+          codesign -f -s "-" --entitlements Payload/*.app/*.entitlements Payload/*.app
+          
+          # إعادة الضغط
+          zip -qr ESign_Signed.ipa Payload
+          
       - name: Upload Result
         uses: actions/upload-artifact@v4
         with:
-          name: Final-Signed-App
+          name: ESign-Final
           path: ESign_Signed.ipa
