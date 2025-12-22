@@ -3,29 +3,26 @@ on:
   workflow_dispatch:
 jobs:
   sign:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup ZSign
-        run: |
-          git clone https://github.com/zhlynn/zsign.git
-          cd zsign && g++ *.cpp -lcrypto -O3 -o zsign
-          sudo cp zsign /usr/local/bin/
-
-      - name: Prepare Secrets
+      - name: Prepare Certificates
         run: |
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
 
+      - name: Install Sign Tool
+        run: brew install isign
+
       - name: Sign IPA
         run: |
-          # هنا سيقوم السيرفر بتوقيع ملف ESign.ipa مباشرة
-          zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ESign_Signed.ipa ESign.ipa
+          # عملية التوقيع للملف الموجود عندك
+          isign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ESign_Signed.ipa ESign.ipa
 
       - name: Upload Signed IPA
         uses: actions/upload-artifact@v4
         with:
-          name: ESign-Ready
+          name: ESign-Signed-Final
           path: ESign_Signed.ipa
