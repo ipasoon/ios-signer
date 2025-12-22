@@ -5,14 +5,8 @@ jobs:
   sign:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Download IPA
-        run: |
-          # هذه الطريقة تسحب الرابط مباشرة وبدقة عالية
-          URL=$(curl -sL https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.assets[] | select(.name | endswith(".ipa")) | .browser_download_url')
-          curl -L "$URL" -o app.ipa
 
       - name: Setup ZSign
         run: |
@@ -27,10 +21,11 @@ jobs:
 
       - name: Sign IPA
         run: |
-          zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
+          # هنا سيقوم السيرفر بتوقيع ملف ESign.ipa مباشرة
+          zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ESign_Signed.ipa ESign.ipa
 
       - name: Upload Signed IPA
         uses: actions/upload-artifact@v4
         with:
-          name: Signed-IPA-File
-          path: signed.ipa
+          name: ESign-Ready
+          path: ESign_Signed.ipa
