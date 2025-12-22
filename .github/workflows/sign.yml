@@ -1,6 +1,7 @@
 name: iOS App Signer
 on:
   workflow_dispatch:
+
 jobs:
   sign:
     runs-on: ubuntu-latest
@@ -10,12 +11,10 @@ jobs:
 
       - name: Download IPA from Release
         run: |
-          # هذا السطر يسحب أحدث ملف IPA رفعته في الـ Release
-          curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest \
-          | grep "browser_download_url.*ipa" \
-          | cut -d : -f 2,3 \
-          | tr -d \" \
-          | wget -qi - -O app.ipa
+          # سحب رابط التحميل لملف الـ IPA من آخر Release تم نشره
+          DOWNLOAD_URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | grep "browser_download_url.*ipa" | cut -d : -f 2,3 | tr -d \" | xargs)
+          echo "Downloading from: $DOWNLOAD_URL"
+          wget -q "$DOWNLOAD_URL" -O app.ipa
 
       - name: Setup ZSign
         run: |
@@ -30,6 +29,7 @@ jobs:
 
       - name: Sign IPA
         run: |
+          # عملية التوقيع باستخدام الشهادة وكلمة السر والبروفايل
           zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
 
       - name: Upload Signed IPA
