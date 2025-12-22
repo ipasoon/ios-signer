@@ -1,28 +1,30 @@
 name: iOS App Signer
 on:
   workflow_dispatch:
+
 jobs:
   sign:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Prepare Certificates
+      - name: Setup ZSign and Sign
         run: |
+          # 1. تحميل أداة التوقيع وبناؤها
+          git clone https://github.com/zhlynn/zsign.git
+          cd zsign
+          g++ *.cpp -lcrypto -O3 -o zsign
+          
+          # 2. تجهيز الشهادات (نحن الآن داخل مجلد zsign)
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
+          
+          # 3. توقيع الملف (الملف موجود في المجلد الأب ..)
+          ./zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ../ESign_Signed.ipa ../ESign.ipa
 
-      - name: Install Sign Tool
-        run: brew install isign
-
-      - name: Sign IPA
-        run: |
-          # عملية التوقيع للملف الموجود عندك
-          isign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ESign_Signed.ipa ESign.ipa
-
-      - name: Upload Signed IPA
+      - name: Upload Result
         uses: actions/upload-artifact@v4
         with:
-          name: ESign-Signed-Final
+          name: ESign-Signed-App
           path: ESign_Signed.ipa
