@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Download IPA
+      - name: Download IPA from Release
         run: |
-          # سحب رابط أحدث ملف IPA من الـ Releases وتحميله باسم app.ipa
-          URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | grep "browser_download_url" | grep ".ipa" | cut -d '"' -f 4 | head -n 1)
-          echo "Downloading from: $URL"
+          # سحب رابط الملف من الـ Releases
+          URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep ".ipa" | head -n 1)
+          echo "Downloading: $URL"
           curl -L "$URL" -o app.ipa
 
       - name: Setup ZSign
@@ -27,12 +27,12 @@ jobs:
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
 
-      - name: Sign Application
+      - name: Sign IPA
         run: |
           zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
 
-      - name: Upload Result
-        uses: actions/upload-artifact@v3
+      - name: Upload Signed IPA
+        uses: actions/upload-artifact@v4
         with:
-          name: Signed-IPA
+          name: My-Signed-App
           path: signed.ipa
