@@ -9,22 +9,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup ZSign and Sign
+      - name: Setup ZSign Tool
         run: |
-          # 1. تحميل أداة التوقيع وبناؤها
           git clone https://github.com/zhlynn/zsign.git
-          cd zsign
-          g++ *.cpp -lcrypto -O3 -o zsign
-          
-          # 2. تجهيز الشهادات (نحن الآن داخل مجلد zsign)
+          cd zsign && g++ *.cpp -lcrypto -O3 -o zsign
+          sudo cp zsign /usr/local/bin/
+
+      - name: Prepare Certificates
+        run: |
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
-          
-          # 3. توقيع الملف (الملف موجود في المجلد الأب ..)
-          ./zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ../ESign_Signed.ipa ../ESign.ipa
+
+      - name: Execute Signing
+        run: |
+          # التوقيع المباشر للملف الموجود في المجلد الرئيسي
+          zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o ESign_Signed.ipa ESign.ipa
 
       - name: Upload Result
         uses: actions/upload-artifact@v4
         with:
-          name: ESign-Signed-App
+          name: Signed-ESign-App
           path: ESign_Signed.ipa
