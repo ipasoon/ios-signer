@@ -7,24 +7,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Download IPA from Release
+        run: |
+          # هذا السطر يسحب أحدث ملف IPA رفعته في الـ Release
+          curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest \
+          | grep "browser_download_url.*ipa" \
+          | cut -d : -f 2,3 \
+          | tr -d \" \
+          | wget -qi - -O app.ipa
+
       - name: Setup ZSign
         run: |
           git clone https://github.com/zhlynn/zsign.git
           cd zsign && g++ *.cpp -lcrypto -O3 -o zsign
           sudo cp zsign /usr/local/bin/
-      - name: Prepare
+
+      - name: Prepare Secrets
         run: |
           echo "${{ secrets.P12_BASE64 }}" | base64 -d > cert.p12
           echo "${{ secrets.PROVISION_BASE64 }}" | base64 -d > dev.mobileprovision
-      - name: Sign
+
+      - name: Sign IPA
         run: |
-          if [ -f "app.ipa" ]; then
-            zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
-          else
-            echo "Error: app.ipa not found"
-            exit 1
-          fi
-      - name: Upload
+          zsign -k cert.p12 -p ${{ secrets.P12_PASSWORD }} -m dev.mobileprovision -o signed.ipa app.ipa
+
+      - name: Upload Signed IPA
         uses: actions/upload-artifact@v3
         with:
           name: Signed-IPA
