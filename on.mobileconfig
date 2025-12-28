@@ -2,7 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
 	<key>PayloadContent</key>
 	<array>
 		<dict>
@@ -10,44 +9,94 @@
 			<dict>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array/>
 				<key>ServerURL</key>
-				<string>https://cloudflare-dns.com/dns-query</string>
+				<string>https://yvsqf1uwl2.cloudflare-gateway.com/dns-query</string>
 			</dict>
-
+			<key>OnDemandRules</key>
+			<array>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>WiFi</string>
+				</dict>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>Cellular</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures Encrypted DNS for Anti-Revoke</string>
+			<key>PayloadDisplayName</key>
+			<string>Anti Revoke DNS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.custom.1</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.appiraq</string>
 			<key>PayloadUUID</key>
-			<string>37A5944C-1EB3-493C-92A0-A02DF3091BCE</string>
+			<string>590396fe-a5b1-4778-a579-5b5ef931fdc7</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
+		</dict>
+
+		<dict>
+			<key>FullScreen</key>
+			<true/>
+			<key>Icon</key>
+			<data>
+			</data>
+			<key>IgnoreManifestScope</key>
+			<true/>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>Ipasoon Profile</string>
 			<key>PayloadDisplayName</key>
-			<string>app-iraq DNS</string>
-			<key>PayloadDescription</key>
-			<string>DNS آمن وسريع</string>
+			<string>Ipasoon Icon</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webClip.managed.custom.2</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>34B78E98-B746-4A69-A771-1D19516E1B9F</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Precomposed</key>
+			<true/>
+			<key>URL</key>
+			<string>https://api.khoindvn.eu.org/fSfJEA</string>
+		</dict>
+
+		<dict>
+			<key>AllowEnterpriseAppInstallation</key>
+			<true/>
+			<key>AllowEnterpriseAppTrust</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Enterprise App Restrictions</string>
+			<key>PayloadIdentifier</key>
+			<string>com.optimized.trial.restrictions</string>
+			<key>PayloadType</key>
+			<string>com.apple.applicationaccess</string>
+			<key>PayloadUUID</key>
+			<string>3D67D52C-9CDC-4927-B2BD-C45302754A98</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
 		</dict>
 	</array>
-
+	<key>PayloadDisplayName</key>
+	<string>Ipasoon Anti-Revoke</string>
+	<key>PayloadIdentifier</key>
+	<string>com.ipasoon.apple-dns.profile</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
-	<key>PayloadIdentifier</key>
-	<string>com.appiraq.profile</string>
 	<key>PayloadUUID</key>
-	<string>B2C1D4E5-F6A7-4B8C-9D0E-1F2A3B4C5D6E</string>
+	<string>cd0b011b-c3e7-45f3-8bac-5139a8da8bd5</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
-
-	<key>PayloadDisplayName</key>
-	<string>app-iraq</string>
-	<key>PayloadOrganization</key>
-	<string>app-iraq</string>
-
-	<!-- ✅ أيقونة -->
-	<key>PayloadIcon</key>
-	<data>
-iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAB...
-	</data>
-
 </dict>
 </plist>
