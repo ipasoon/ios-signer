@@ -2,36 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadVersion</key>
-	<integer>1</integer>
-	<key>PayloadIdentifier</key>
-	<string>com.appiraq.profile</string>
-	<key>PayloadUUID</key>
-	<string>AAAABBBB-CCCC-DDDD-EEEE-APPIRAQ0001</string>
-	<key>PayloadDisplayName</key>
-	<string>app-iraq</string>
-	<key>PayloadOrganization</key>
-	<string>app-iraq</string>
-
 	<key>PayloadContent</key>
 	<array>
-
-		<!-- DNS -->
 		<dict>
-			<key>PayloadType</key>
-			<string>com.apple.dnsSettings.managed</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.appiraq.dns</string>
-			<key>PayloadUUID</key>
-			<string>DNS-APP-IRAQ-0001</string>
-			<key>PayloadDisplayName</key>
-			<string>app-iraq DNS</string>
-
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
@@ -39,37 +12,37 @@
 				<key>ServerURL</key>
 				<string>https://32ev95ur21.cloudflare-gateway.com/dns-query</string>
 			</dict>
-		</dict>
-
-		<!-- WebClip (الأيقونة الحقيقية) -->
-		<dict>
+			<key>PayloadDescription</key>
+			<string>app-iraq DNS لمنع التوقف وحماية الشهادات</string>
+			<key>PayloadDisplayName</key>
+			<string>app-iraq DNS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.appiraq.dns</string>
 			<key>PayloadType</key>
-			<string>com.apple.webClip.managed</string>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>37A5944C-1EB3-493C-92A0-A02DF3091BCE</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.appiraq.webclip</string>
-			<key>PayloadUUID</key>
-			<string>WEB-APP-IRAQ-0001</string>
-			<key>PayloadDisplayName</key>
-			<string>app-iraq</string>
-
-			<key>Label</key>
-			<string>app-iraq</string>
-			<key>URL</key>
-			<string>https://ipasoon.icu</string>
-			<key>IsRemovable</key>
-			<true/>
-			<key>FullScreen</key>
-			<false/>
-
-			<key>Icon</key>
-			<data>
-			ضع هنا Base64 للصورة بعد تحويلها إلى PNG 180x180
-			</data>
 		</dict>
-
 	</array>
-
+	<key>PayloadDescription</key>
+	<string>رابط الموقع الرسمي: https://ipasoon.icu</string>
+	<key>PayloadDisplayName</key>
+	<string>app-iraq</string>
+	<key>PayloadIdentifier</key>
+	<string>com.appiraq.official.profile</string>
+	<key>PayloadOrganization</key>
+	<string>app-iraq</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>B2C1D4E5-F6A7-4B8C-9D0E-1F2A3B4C5D6E</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>Icon</key>
+	<data>
+	/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAHCAHADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc6R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK1RVVldYWVpjZGVmZnaGlqc6R1dc3BxNWDRlZnEBfV0uD3ByGp6KTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z
+	</data>
 </dict>
 </plist>
