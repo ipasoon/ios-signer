@@ -18,7 +18,7 @@
 				<string>https://dns.adguard.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>تثبيت DNS آمن بواسطة app-iraq لمنع التوقف</string>
+			<string>تثبيت DNS آمن بواسطة app-iraq لمنع التوقف وحجب الإعلانات</string>
 			<key>PayloadDisplayName</key>
 			<string>app-iraq DNS</string>
 			<key>PayloadIdentifier</key>
