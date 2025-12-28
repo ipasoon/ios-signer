@@ -11,54 +11,42 @@
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
 				<key>ServerURL</key>
-				<string>https://32ev95ur21.cloudflare-gateway.com/dns-query</string>
+				<string>https://cloudflare-dns.com/dns-query</string>
 			</dict>
-
-			<key>PayloadDescription</key>
-			<string>تثبيت DNS آمن بواسطة app-iraq</string>
-
-			<key>PayloadDisplayName</key>
-			<string>app-iraq DNS</string>
-
-			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.appiraq</string>
 
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
-
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.appiraq</string>
 			<key>PayloadUUID</key>
 			<string>37A5944C-1EB3-493C-92A0-A02DF3091BCE</string>
-
 			<key>PayloadVersion</key>
 			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>app-iraq DNS</string>
+			<key>PayloadDescription</key>
+			<string>DNS آمن وسريع</string>
 		</dict>
 	</array>
 
-	<key>PayloadDescription</key>
-	<string>رابط الموقع: https://ipasoon.icu</string>
-
-	<key>PayloadDisplayName</key>
-	<string>app-iraq</string>
-
-	<key>PayloadIdentifier</key>
-	<string>com.appiraq.official.profile</string>
-
-	<key>PayloadOrganization</key>
-	<string>app-iraq</string>
-
 	<key>PayloadType</key>
 	<string>Configuration</string>
-
+	<key>PayloadIdentifier</key>
+	<string>com.appiraq.profile</string>
 	<key>PayloadUUID</key>
 	<string>B2C1D4E5-F6A7-4B8C-9D0E-1F2A3B4C5D6E</string>
-
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 
-	<!-- ✅ الأيقونة -->
+	<key>PayloadDisplayName</key>
+	<string>app-iraq</string>
+	<key>PayloadOrganization</key>
+	<string>app-iraq</string>
+
+	<!-- ✅ أيقونة -->
 	<key>PayloadIcon</key>
 	<data>
-/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAoACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc6R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigD//Z
+iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAB...
 	</data>
 
 </dict>
