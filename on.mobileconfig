@@ -40,9 +40,9 @@
 			<key>Label</key>
 			<string>app-iraq</string>
 			<key>PayloadDescription</key>
-			<string>أيقونة تطبيق app-iraq</string>
+			<string>app-iraq</string>
 			<key>PayloadDisplayName</key>
-			<string>app-iraq Shortcut</string>
+			<string>app-iraq</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.webClip.managed.appiraq</string>
 			<key>PayloadType</key>
