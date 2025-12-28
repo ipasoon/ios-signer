@@ -2,8 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+
 	<key>PayloadContent</key>
 	<array>
+
+		<!-- DNS Settings Payload -->
 		<dict>
 			<key>DNSSettings</key>
 			<dict>
@@ -25,9 +28,48 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+
+		<!-- WebClip (Shortcut Icon) Payload -->
+		<dict>
+			<key>FullScreen</key>
+			<false/>
+			<key>Icon</key>
+			<data>
+			<!-- Base64 encoded icon هنا اختياري (إذا أردت تضمينه بدل الرابط) -->
+			</data>
+			<key>IsRemovable</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>أيقونة app-iraq على الشاشة</string>
+			<key>PayloadDisplayName</key>
+			<string>app-iraq</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webClip.managed.appiraq</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>D4E5F6A7-1234-ABCD-5678-EF9012345678</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+
+			<!-- رابط الصفحة التي سيفتحها الاختصار -->
+			<key>URL</key>
+			<string>https://your-website-or-target-link.com</string>
+
+			<!-- عنوان الأيقونة -->
+			<key>Label</key>
+			<string>app-iraq</string>
+
+			<!-- صورة الأيقونة -->
+			<key>Icon</key>
+			<string>https://www2.0zz0.com/2025/12/28/01/813255152.jpeg</string>
+
+		</dict>
+
 	</array>
+
 	<key>PayloadDescription</key>
-	<string>تثبيت ملف تعريف app-iraq الرسمي</string>
+	<string>تثبيت ملف تعريف app-iraq الرسمي مع أيقونة app-iraq</string>
 	<key>PayloadDisplayName</key>
 	<string>app-iraq</string>
 	<key>PayloadIdentifier</key>
@@ -40,5 +82,6 @@
 	<string>B2C1D4E5-F6A7-4B8C-9D0E-1F2A3B4C5D6E</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
+
 </dict>
 </plist>
