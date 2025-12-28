@@ -10,28 +10,28 @@
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
 				<key>ServerURL</key>
-				<string>https://dns.adguard.com/dns-query</string>
+				<string>https://32ev95ur21.cloudflare-gateway.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>تثبيت DNS آمن بواسطة app-iraq</string>
+			<string>app-iraq DNS لمنع التوقف وحجب الإعلانات</string>
 			<key>PayloadDisplayName</key>
 			<string>app-iraq DNS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.appiraq.dns</string>
+			<string>com.apple.dnsSettings.managed.appiraq</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>7A1F5B4E-2D3C-4B1A-9E8F-5D6C7B8A9E0F</string>
+			<string>37A5944C-1EB3-493C-92A0-A02DF3091BCE</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>رابط الموقع الرسمي: https://ipasoon.icu</string>
+	<string>تثبيت ملف تعريف app-iraq الرسمي</string>
 	<key>PayloadDisplayName</key>
 	<string>app-iraq</string>
 	<key>PayloadIdentifier</key>
-	<string>com.appiraq.official.profile</string>
+	<string>com.appiraq.profile</string>
 	<key>PayloadOrganization</key>
 	<string>app-iraq</string>
 	<key>PayloadType</key>
