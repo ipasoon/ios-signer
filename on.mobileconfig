@@ -42,54 +42,9 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
-
-		<dict>
-			<key>FullScreen</key>
-			<true/>
-			<key>Icon</key>
-			<data>
-			</data>
-			<key>IgnoreManifestScope</key>
-			<true/>
-			<key>IsRemovable</key>
-			<true/>
-			<key>Label</key>
-			<string>Ipasoon Profile</string>
-			<key>PayloadDisplayName</key>
-			<string>Ipasoon Icon</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.webClip.managed.custom.2</string>
-			<key>PayloadType</key>
-			<string>com.apple.webClip.managed</string>
-			<key>PayloadUUID</key>
-			<string>34B78E98-B746-4A69-A771-1D19516E1B9F</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>Precomposed</key>
-			<true/>
-			<key>URL</key>
-			<string>https://api.khoindvn.eu.org/fSfJEA</string>
-		</dict>
-
-		<dict>
-			<key>AllowEnterpriseAppInstallation</key>
-			<true/>
-			<key>AllowEnterpriseAppTrust</key>
-			<true/>
-			<key>PayloadDisplayName</key>
-			<string>Enterprise App Restrictions</string>
-			<key>PayloadIdentifier</key>
-			<string>com.optimized.trial.restrictions</string>
-			<key>PayloadType</key>
-			<string>com.apple.applicationaccess</string>
-			<key>PayloadUUID</key>
-			<string>3D67D52C-9CDC-4927-B2BD-C45302754A98</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>Ipasoon Anti-Revoke</string>
+	<string>Ipasoon Anti-Revoke Corrected</string>
 	<key>PayloadIdentifier</key>
 	<string>com.ipasoon.apple-dns.profile</string>
 	<key>PayloadType</key>
