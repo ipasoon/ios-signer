@@ -13,7 +13,7 @@
 				<string>https://dns.adguard.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>تكوين DNS الخاص بـ App Iraq</string>
+			<string>تكوين DNS لمنع حظر الشهادات - App Iraq</string>
 			<key>PayloadDisplayName</key>
 			<string>App Iraq DNS</string>
 			<key>PayloadIdentifier</key>
@@ -21,13 +21,35 @@
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>12345678-1234-1234-1234-123456789012</string>
+			<string>A1B2C3D4-E5F6-7G8H-9I0J-K1L2M3N4O5P6</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>FullScreen</key>
+			<true/>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>App Iraq</string>
+			<key>PayloadDescription</key>
+			<string>أيقونة تطبيق App Iraq</string>
+			<key>PayloadDisplayName</key>
+			<string>Web Clip (App Iraq)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.appiraq.webclip</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>B2C3D4E5-F6G7-8H9I-0J1K-L2M3N4O5P6Q7</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>URL</key>
+			<string>https://holy-dawn-b51a.ipasoon.workers.dev/</string>
+		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>App Iraq Profile</string>
+	<string>App Iraq Full Profile</string>
 	<key>PayloadIdentifier</key>
 	<string>com.appiraq.profile</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -35,7 +57,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>87654321-4321-4321-4321-210987654321</string>
+	<string>Z9Y8X7W6-V5U4-T3S2-R1Q0-P9O8N7M6L5K4</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
