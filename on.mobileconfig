@@ -3,89 +3,69 @@
  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>PayloadContent</key>
+    <array>
+        <!-- DNS Settings Payload -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>1.1.1.1</string>
+                    <string>1.0.0.1</string>
+                </array>
+                <key>ServerURL</key>
+                <string>https://dns.appiraq.com/dns-query</string>
+            </dict>
+            <key>PayloadDescription</key>
+            <string>DNS Configuration for appiraq</string>
+            <key>PayloadDisplayName</key>
+            <string>appiraq</string>
+            <key>PayloadIdentifier</key>
+            <string>com.appiraq.dnsprofile</string>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadUUID</key>
+            <string>12345678-ABCD-1234-ABCD-1234567890AB</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
 
-  <key>PayloadType</key>
-  <string>Configuration</string>
+        <!-- Web Clip Payload -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.appiraq.webclip</string>
+            <key>PayloadUUID</key>
+            <string>11223344-AABB-CCDD-EEFF-112233445566</string>
+            <key>PayloadDisplayName</key>
+            <string>appiraq</string>
+            <key>URL</key>
+            <string>https://yourgithubusername.github.io/index.html</string>
+            <key>IsRemovable</key>
+            <true/>
+        </dict>
+    </array>
 
-  <key>PayloadVersion</key>
-  <integer>1</integer>
-
-  <key>PayloadIdentifier</key>
-  <string>com.appiraq.profile</string>
-
-  <key>PayloadUUID</key>
-  <string>2F6B3E9C-7A4A-4D8F-9E61-9B8E3E5A9A21</string>
-
-  <key>PayloadDisplayName</key>
-  <string>app iraq</string>
-
-  <key>PayloadDescription</key>
-  <string>app iraq DNS Profile</string>
-
-  <key>PayloadOrganization</key>
-  <string>app iraq</string>
-
-  <key>PayloadContent</key>
-  <array>
-
-    <!-- DNS -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.dnsSettings.managed</string>
-
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-
-      <key>PayloadIdentifier</key>
-      <string>com.appiraq.dns</string>
-
-      <key>PayloadUUID</key>
-      <string>9A4C6D28-3B92-4E9F-8D5C-7A9E4B2F1C33</string>
-
-      <key>PayloadDisplayName</key>
-      <string>app iraq DNS</string>
-
-      <key>DNSSettings</key>
-      <dict>
-        <key>DNSProtocol</key>
-        <string>HTTPS</string>
-        <key>ServerURL</key>
-        <string>https://dns.google/dns-query</string>
-      </dict>
-    </dict>
-
-    <!-- ICON ON HOME SCREEN -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.webClip.managed</string>
-
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-
-      <key>PayloadIdentifier</key>
-      <string>com.appiraq.webclip</string>
-
-      <key>PayloadUUID</key>
-      <string>4C8E2A9F-1D7B-4F91-B6E4-6D9A8F2C3E11</string>
-
-      <key>PayloadDisplayName</key>
-      <string>app iraq</string>
-
-      <key>Label</key>
-      <string>app iraq</string>
-
-      <key>URL</key>
-      <string>https://holy-dawn-b51a.ipasoon.workers.dev</string>
-
-      <key>IsRemovable</key>
-      <true/>
-
-      <key>Precomposed</key>
-      <true/>
-
-    </dict>
-
-  </array>
-
+    <!-- Profile Metadata -->
+    <key>PayloadDescription</key>
+    <string>Configuration profile to set DNS and Web Clip for appiraq</string>
+    <key>PayloadDisplayName</key>
+    <string>appiraq</string>
+    <key>PayloadIdentifier</key>
+    <string>com.appiraq.profile</string>
+    <key>PayloadOrganization</key>
+    <string>ipasoon</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>87654321-DCBA-4321-DCBA-0987654321FE</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
 </dict>
 </plist>
