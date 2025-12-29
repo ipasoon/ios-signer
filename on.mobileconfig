@@ -32,7 +32,7 @@
 			<key>PayloadDescription</key>
 			<string>Configures Encrypted DNS for Anti-Revoke</string>
 			<key>PayloadDisplayName</key>
-			<string>Anti Revoke DNS</string>
+			<string>Ipasoon DNS Settings</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.custom.1</string>
 			<key>PayloadType</key>
@@ -42,9 +42,37 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+
+		<dict>
+			<key>FullScreen</key>
+			<true/>
+			<key>Icon</key>
+			<data>
+            </data>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>IPASOON STORE</string>
+			<key>PayloadDescription</key>
+			<string>Ipasoon Official Icon</string>
+			<key>PayloadDisplayName</key>
+			<string>Ipasoon Icon</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webClip.managed.custom.2</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>34B78E98-B746-4A69-A771-1D19516E1B9F</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Precomposed</key>
+			<true/>
+			<key>URL</key>
+			<string>https://ipasoon.icu</string>
+		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>Ipasoon Anti-Revoke Corrected</string>
+	<string>Ipasoon Anti-Revoke &amp; Icon</string>
 	<key>PayloadIdentifier</key>
 	<string>com.ipasoon.apple-dns.profile</string>
 	<key>PayloadType</key>
