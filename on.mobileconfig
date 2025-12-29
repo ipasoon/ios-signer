@@ -19,12 +19,10 @@
 					<string>Connect</string>
 				</dict>
 			</array>
-			<key>PayloadDescription</key>
-			<string>تكوين DNS مشفر لمتجر App Iraq لمنع توقف التطبيقات.</string>
 			<key>PayloadDisplayName</key>
 			<string>App Iraq DNS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.appiraq.dns.managed</string>
+			<string>com.appiraq.dns</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
@@ -32,21 +30,15 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
-
 		<dict>
 			<key>FullScreen</key>
 			<true/>
-			<key>Icon</key>
-			<data>
-			</data>
 			<key>IsRemovable</key>
 			<true/>
 			<key>Label</key>
 			<string>App Iraq</string>
-			<key>PayloadDescription</key>
-			<string>أيقونة وصول سريع لمتجر App Iraq.</string>
 			<key>PayloadDisplayName</key>
-			<string>App Iraq WebClip</string>
+			<string>App Iraq Icon</string>
 			<key>PayloadIdentifier</key>
 			<string>com.appiraq.webclip</string>
 			<key>PayloadType</key>
@@ -55,14 +47,10 @@
 			<string>34B78E98-B746-4A69-A771-1D19516E1B9F</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>Precomposed</key>
-			<true/>
 			<key>URL</key>
 			<string>https://ipasoon.icu</string>
 		</dict>
 	</array>
-	<key>PayloadDescription</key>
-	<string>الملف الرسمي لمتجر App Iraq - منع توقف الشهادات (Anti-Revoke).</string>
 	<key>PayloadDisplayName</key>
 	<string>App Iraq Official Profile</string>
 	<key>PayloadIdentifier</key>
@@ -72,7 +60,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>com-appiraq-profile-uuid</string>
+	<string>com-appiraq-profile</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
