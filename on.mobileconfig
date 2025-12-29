@@ -14,7 +14,7 @@
   <string>com.appiraq.profile</string>
 
   <key>PayloadUUID</key>
-  <string>8F1A2C9E-APP-IRAQ-0001</string>
+  <string>6A9C2E4D-3C1A-4B8F-9A12-IRAQAPP001</string>
 
   <key>PayloadDisplayName</key>
   <string>app iraq</string>
@@ -28,7 +28,7 @@
   <key>PayloadContent</key>
   <array>
 
-    <!-- DNS PAYLOAD -->
+    <!-- DNS -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.dnsSettings.managed</string>
@@ -40,7 +40,7 @@
       <string>com.appiraq.dns</string>
 
       <key>PayloadUUID</key>
-      <string>8F1A2C9E-APP-IRAQ-DNS</string>
+      <string>9C1B7A44-5F9A-4C8E-8B11-DNSIRAQ001</string>
 
       <key>PayloadDisplayName</key>
       <string>app iraq DNS</string>
@@ -54,7 +54,7 @@
       </dict>
     </dict>
 
-    <!-- WEB CLIP ICON -->
+    <!-- WEB CLIP -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.webClip.managed</string>
@@ -66,23 +66,19 @@
       <string>com.appiraq.webclip</string>
 
       <key>PayloadUUID</key>
-      <string>8F1A2C9E-APP-IRAQ-WEB</string>
-
-      <key>PayloadDisplayName</key>
-      <string>app iraq</string>
+      <string>1F2A9C88-7B1A-4E5D-9F00-WEBIRAQ001</string>
 
       <key>Label</key>
       <string>app iraq</string>
 
       <key>URL</key>
-      <string>https://YOUR-SITE-HERE.com</string>
+      <string>https://holy-dawn-b51a.ipasoon.workers.dev</string>
 
       <key>IsRemovable</key>
       <true/>
 
       <key>Precomposed</key>
       <true/>
-
     </dict>
 
   </array>
