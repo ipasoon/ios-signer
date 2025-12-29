@@ -19,8 +19,10 @@
 					<string>Connect</string>
 				</dict>
 			</array>
+			<key>PayloadDescription</key>
+			<string>تكوين DNS مشفر لمتجر App Iraq لمنع توقف التطبيقات.</string>
 			<key>PayloadDisplayName</key>
-			<string>App Iraq DNS Anti-Revoke</string>
+			<string>App Iraq DNS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.appiraq.dns.managed</string>
 			<key>PayloadType</key>
@@ -41,8 +43,10 @@
 			<true/>
 			<key>Label</key>
 			<string>App Iraq</string>
+			<key>PayloadDescription</key>
+			<string>أيقونة وصول سريع لمتجر App Iraq.</string>
 			<key>PayloadDisplayName</key>
-			<string>App Iraq Icon</string>
+			<string>App Iraq WebClip</string>
 			<key>PayloadIdentifier</key>
 			<string>com.appiraq.webclip</string>
 			<key>PayloadType</key>
@@ -58,9 +62,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>App Iraq Official DNS Profile - Anti Revoke Service</string>
+	<string>الملف الرسمي لمتجر App Iraq - منع توقف الشهادات (Anti-Revoke).</string>
 	<key>PayloadDisplayName</key>
-	<string>App Iraq Profile</string>
+	<string>App Iraq Official Profile</string>
 	<key>PayloadIdentifier</key>
 	<string>com.appiraq.config</string>
 	<key>PayloadOrganization</key>
@@ -68,7 +72,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>com-appiraq-cfdnscp</string>
+	<string>com-appiraq-profile-uuid</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
