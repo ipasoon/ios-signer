@@ -30,6 +30,7 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+
 		<dict>
 			<key>FullScreen</key>
 			<true/>
@@ -48,19 +49,22 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>URL</key>
-			<string>https://ipasoon.icu</string>
+			<string>https://ipasoon.icu</string> <key>Precomposed</key>
+			<true/>
 		</dict>
 	</array>
+	<key>PayloadDescription</key>
+	<string>App Iraq Official Profile - DNS &amp; Web Icon</string>
 	<key>PayloadDisplayName</key>
-	<string>App Iraq Official Profile</string>
+	<string>App Iraq Official</string>
 	<key>PayloadIdentifier</key>
 	<string>com.appiraq.config</string>
 	<key>PayloadOrganization</key>
-	<string>App Iraq Team</string>
+	<string>App Iraq</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>com-appiraq-profile</string>
+	<string>com-appiraq-full-profile</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
