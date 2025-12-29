@@ -9,8 +9,6 @@
 			<dict>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
-				<key>ServerAddresses</key>
-				<array/>
 				<key>ServerURL</key>
 				<string>https://yvsqf1uwl2.cloudflare-gateway.com/dns-query</string>
 			</dict>
@@ -19,26 +17,16 @@
 				<dict>
 					<key>Action</key>
 					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>WiFi</string>
-				</dict>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>Cellular</string>
 				</dict>
 			</array>
-			<key>PayloadDescription</key>
-			<string>Configures Encrypted DNS for Anti-Revoke</string>
 			<key>PayloadDisplayName</key>
-			<string>Ipasoon DNS Settings</string>
+			<string>App Iraq DNS Anti-Revoke</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.custom.1</string>
+			<string>com.appiraq.dns.managed</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>590396fe-a5b1-4778-a579-5b5ef931fdc7</string>
+			<string>37A5944C-1EB3-493C-92A0-A02DF3091BCE</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
@@ -48,17 +36,15 @@
 			<true/>
 			<key>Icon</key>
 			<data>
-            </data>
+			</data>
 			<key>IsRemovable</key>
 			<true/>
 			<key>Label</key>
-			<string>IPASOON STORE</string>
-			<key>PayloadDescription</key>
-			<string>Ipasoon Official Icon</string>
+			<string>App Iraq</string>
 			<key>PayloadDisplayName</key>
-			<string>Ipasoon Icon</string>
+			<string>App Iraq Icon</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.webClip.managed.custom.2</string>
+			<string>com.appiraq.webclip</string>
 			<key>PayloadType</key>
 			<string>com.apple.webClip.managed</string>
 			<key>PayloadUUID</key>
@@ -71,14 +57,18 @@
 			<string>https://ipasoon.icu</string>
 		</dict>
 	</array>
+	<key>PayloadDescription</key>
+	<string>App Iraq Official DNS Profile - Anti Revoke Service</string>
 	<key>PayloadDisplayName</key>
-	<string>Ipasoon Anti-Revoke &amp; Icon</string>
+	<string>App Iraq Profile</string>
 	<key>PayloadIdentifier</key>
-	<string>com.ipasoon.apple-dns.profile</string>
+	<string>com.appiraq.config</string>
+	<key>PayloadOrganization</key>
+	<string>App Iraq Team</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>cd0b011b-c3e7-45f3-8bac-5139a8da8bd5</string>
+	<string>com-appiraq-cfdnscp</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
